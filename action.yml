@@ -30,7 +30,7 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/black-magius/kube-helm:main'
+  image: 'docker://ghcr.io/black-magius/kube-helm:oic'
   env:
     kube_helm_deploy_app_version: ""
     kube_helm_deploy_path_to_helm_files: "./.deploy/.chart"
