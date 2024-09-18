@@ -5,9 +5,6 @@ echo Auth process
 mkdir $HOME/.kube
 echo "$kube_helm_deploy_kube_auth_line" | base64 -d > $HOME/.kube/config
 
-echo "195.201.174.12 oic-kube" >> /etc/hosts
-cat /etc/hosts
-
 echo kube_helm_deploy_get_app_version
 echo "$kube_helm_deploy_app_version"
 if [[ "$kube_helm_deploy_app_version" == '' ]]; then
