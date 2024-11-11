@@ -8,6 +8,4 @@ RUN apk add --update coreutils gettext curl bash && \
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-RUN echo "195.201.174.12 oic-kube" >> /etc/hosts
-
 ENTRYPOINT ["/entrypoint.sh"]
