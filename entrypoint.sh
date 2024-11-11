@@ -5,6 +5,10 @@ echo Auth process
 mkdir $HOME/.kube
 echo "$kube_helm_deploy_kube_auth_line" | base64 -d > $HOME/.kube/config
 
+echo "check that cluster is reachable"
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && chmod +x ./kubectl && mkdir -p $HOME/.kube
+./kubectl get all -n oic-infra
+
 echo kube_helm_deploy_get_app_version
 echo "$kube_helm_deploy_app_version"
 if [[ "$kube_helm_deploy_app_version" == '' ]]; then
